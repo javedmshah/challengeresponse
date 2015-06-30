@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+
+<!DOCTYPE ServicesConfiguration PUBLIC "=//iPlanet//Service Management Services (SMS) 1.0 DTD//EN"  "jar://com/sun/identity/sm/sms.dtd">
+<ServicesConfiguration>
+	<Service name="iPlanetAMAuthChallengeResponseModuleService"
+		version="1.0">
+		<Schema
+			serviceHierarchy="/DSAMEConfig/authentication/iPlanetAMAuthChallengeResponseModuleService"
+			i18nFileName="amAuthChallengeResponseModule" revisionNumber="10"
+			i18nKey="challenge-response-service-description">
+		  <Organization>
+                	<AttributeSchema name="iplanet-am-auth-challengeresponse-auth-level"
+                    		type="single"
+                    		syntax="number_range" rangeStart="0" rangeEnd="2147483647"
+                    		i18nKey="a500">
+            			<DefaultValues>
+                        		<Value>1</Value>
+	            		</DefaultValues>
+                	</AttributeSchema>
+                	<AttributeSchema name="iplanet-am-auth-challengeresponse-attribute-name"
+                    		type="single"
+                    		syntax="string"
+                    		i18nKey="a501">
+            			<DefaultValues>
+                        		<Value>description</Value>
+	            		</DefaultValues>
+                	</AttributeSchema>
+                	<AttributeSchema name="iplanet-am-auth-challengeresponse-hash-enabled"
+                    		type="single"
+                    		syntax="boolean"
+                    		i18nKey="a502">
+            			<DefaultValues>
+                        		<Value>true</Value>
+	            		</DefaultValues>
+                	</AttributeSchema>
+                	<AttributeSchema name="iplanet-am-auth-challengeresponse-question-1"
+                    		type="single"
+                    		syntax="string"
+                    		i18nKey="a503">
+            			<DefaultValues>
+                        		<Value>Which city were you born in?</Value>
+	            		</DefaultValues>
+                	</AttributeSchema>
+ 
+                	<SubSchema name="serverconfig" inheritance="multiple">
+                    		<AttributeSchema name="iplanet-am-auth-challengeresponse-auth-level"
+                       	 		type="single"
+		                        syntax="number_range" rangeStart="0" rangeEnd="2147483647"
+                		        i18nKey="a500">
+		                        <DefaultValues>
+        		                    <Value>1</Value>
+                		        </DefaultValues>
+	                       </AttributeSchema>
+	                       <AttributeSchema name="iplanet-am-auth-challengeresponse-attribute-name"
+                    		type="single"
+                    		syntax="string"
+                    		i18nKey="a501">
+            			<DefaultValues>
+                        		<Value>description</Value>
+	            		</DefaultValues>
+                	</AttributeSchema>
+                	<AttributeSchema name="iplanet-am-auth-challengeresponse-hash-enabled"
+                    		type="single"
+                    		syntax="boolean"
+                    		i18nKey="a502">
+            			<DefaultValues>
+                        		<Value>true</Value>
+	            		</DefaultValues>
+                	</AttributeSchema>
+                	<AttributeSchema name="iplanet-am-auth-challengeresponse-question-1"
+                    		type="single"
+                    		syntax="string"
+                    		i18nKey="a503">
+            			<DefaultValues>
+                        		<Value>Which city were you born in?</Value>
+	            		</DefaultValues>
+                	</AttributeSchema>
+           	      </SubSchema>
+            	  </Organization>
+		</Schema>
+	</Service>
+</ServicesConfiguration>
